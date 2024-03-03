@@ -9,6 +9,7 @@ class TrajectoryModel(nn.Module):
         super().__init__()
 
         self.state_dim = state_dim
+        self.multi_modal = type(self.state_dim) == dict
         self.act_dim = act_dim
         self.max_length = max_length
 
